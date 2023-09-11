@@ -37,7 +37,7 @@ body {
 .sidebar {
   padding: 2.5rem;
   background-color: #f4faff;
-  min-width: 20vw;
+  min-width: 15vw;
 }
 .content {
   padding: 2.5rem;
@@ -72,7 +72,7 @@ ul li a:hover {
 
 h1 {
   margin: 0;
-  padding: 0;
+  padding: 0.75rem;
   white-space: nowrap;
 }
 
@@ -100,13 +100,19 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px 15px;
-  border-radius: 2px;
+  padding: 5rem 6rem;
+  border-radius: 5px;
   font-weight: 500;
   color: blue;
-  background-color: #e6e6ff;
+  background-color: #f4faff;
+  border: solid 1px #d7d7ff;
   cursor: pointer;
+  transition: 0.2s;
 }
+.choose-file-btn:hover {
+  border-color: blue;
+}
+
 .image-preview-container img {
   max-width: 500px;
 }
@@ -121,7 +127,7 @@ a:hover {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   border-style: none;
   padding: 10px 15px;
-  border-radius: 2px;
+  border-radius: 5px;
   font-weight: 500;
   color: blue;
   background-color: #e6e6ff;

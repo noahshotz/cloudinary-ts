@@ -131,7 +131,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ cloudName, uploadPreset }) =>
                         onDrop={handleDrop}
                         onDragOver={handleDragOver}
                     >
-                        <ImgIcon /> Select image
+                        <ImgIcon />Choose a file or drop it here
                     </div>
                 </label>
             </div>
