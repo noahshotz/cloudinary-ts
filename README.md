@@ -1,3 +1,8 @@
+# Cloudinary image manager in React TS
+## About
+
+This is a WIP basic implementation of an image manager using Cloudinary in React TS.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
