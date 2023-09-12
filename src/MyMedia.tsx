@@ -10,9 +10,9 @@ interface ImageData {
 }
 
 // Use environment variables directly
-const cloudName = process.env.CLOUD_NAME;
-const apiKey = process.env.API_KEY;
-const apiSecret = process.env.API_SECRET;
+const cloudName = import.meta.env.VITE_CLOUD_NAME;
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiSecret = import.meta.env.VITE_API_SECRET;
 
 function MyMedia() {
     const [images, setImages] = useState<ImageData[]>([])
