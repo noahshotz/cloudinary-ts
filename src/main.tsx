@@ -16,6 +16,7 @@ import MyMedia from "./MyMedia"
 import Upload from "./Upload"
 import Profile from "./Profile"
 
+import Signup from './Signup';
 import Login from "./Login"
 
 import './index.css'
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
   },
 ]);
 
