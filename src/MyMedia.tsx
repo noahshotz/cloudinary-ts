@@ -12,9 +12,9 @@ interface ImageData {
 function MyMedia() {
     const [images, setImages] = useState<ImageData[]>([]);
     // Use environment variables directly
-    const cloudName = process.env.REACT_APP_CLOUD_NAME;
-    const apiKey = process.env.REACT_APP_API_KEY;
-    const apiSecret = process.env.REACT_APP_API_SECRET;
+    const cloudName = process.env.CLOUD_NAME;
+    const apiKey = process.env.API_KEY;
+    const apiSecret = process.env.API_SECRET;
 
     useEffect(() => {
         if (cloudName && apiKey && apiSecret) {
