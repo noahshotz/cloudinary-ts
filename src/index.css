@@ -39,6 +39,9 @@ body {
   background-color: #f4faff;
   min-width: 15vw;
 }
+.sidebar img {
+  padding: 0.5rem 0.75rem;
+}
 .content {
   padding: 2.5rem;
   width: 100%;
