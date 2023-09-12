@@ -43,7 +43,7 @@ function MyMedia() {
         return images.map((image) => {
             const cld = new Cloudinary({
                 cloud: {
-                    cloudName: 'dhc0uuvta', // Replace with your actual Cloudinary cloud name
+                    cloudName: 'dhc0uuvta',
                 },
             });
 
