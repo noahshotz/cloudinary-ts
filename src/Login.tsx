@@ -20,7 +20,7 @@ const Login: React.FC = () => {
 
       // Signed in
       const user = userCredential.user;
-      navigate("/home");
+      navigate("/mymedia");
       console.log(user);
     } catch (error: any) {
       const errorCode = error.code;
