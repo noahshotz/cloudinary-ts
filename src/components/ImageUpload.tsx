@@ -2,7 +2,6 @@
 import React, { useState, useCallback } from "react"
 
 // import cloudinary components
-import { Cloudinary } from "@cloudinary/url-gen";
 
 // import icons
 import { BsImageFill as ImgIcon } from 'react-icons/bs'
@@ -23,11 +22,13 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ cloudName, uploadPreset }) =>
     const [preview, setPreview] = useState<string | null>(null);
 
     // create and configure your Cloudinary instance.
+    /*
     const cld = new Cloudinary({
         cloud: {
             cloudName: cloudName
         }
     });
+    */
 
     // define upload function
     const uploadImage = async () => {
@@ -55,6 +56,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ cloudName, uploadPreset }) =>
             )
             const res = await response.json()
             setUrl(res.public_id)
+            console.log("url is now: ", url)
         } catch (error) {
             console.error("An error occurred:", error);
         } finally {
