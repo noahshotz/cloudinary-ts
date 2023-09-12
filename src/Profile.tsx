@@ -9,6 +9,7 @@ function Profile() {
         <Sidebar />
         <div className="content">
           <h1>Profile</h1>
+          <h2>Ich geh jetzt pennen o_o</h2>
         </div>
       </div>
     </React.Fragment>
