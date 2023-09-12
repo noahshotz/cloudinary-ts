@@ -37,7 +37,7 @@ const Signup: React.FC = () => {
             <section>
                 <div>
                     <div>
-                        <h1>FocusApp</h1>
+                        <h1>Cloudinary-TS Login</h1>
                         <form>
                             <div>
                                 <label htmlFor="email-address">
