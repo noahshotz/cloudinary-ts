@@ -16,6 +16,8 @@ import MyMedia from "./MyMedia"
 import Upload from "./Upload"
 import Profile from "./Profile"
 
+import Login from "./Login"
+
 import './index.css'
 
 // access environment variables from netlify
@@ -50,7 +52,11 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
-  }
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 
 

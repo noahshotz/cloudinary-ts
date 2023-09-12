@@ -79,7 +79,7 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
                     <h1>My media</h1>
                     <div className="image-container">
                         {hadLoaded ? (
-                            renderImages() // Render images only if hadLoaded is true
+                            renderImages()
                         ) : (
                             <div>
                                 <p>Loading...</p>
