@@ -9,12 +9,13 @@ interface ImageData {
     // Add any other properties you need from the image data
 }
 
-// Use environment variables directly
-const cloudName = import.meta.env.VITE_CLOUD_NAME;
-const apiKey = import.meta.env.VITE_API_KEY;
-const apiSecret = import.meta.env.VITE_API_SECRET;
+interface MyMediaProps {
+    cloudName: string;
+    apiKey: string;
+    apiSecret: string;
+}
 
-function MyMedia() {
+function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
     const [images, setImages] = useState<ImageData[]>([])
 
     console.log("cloud name" + cloudName)

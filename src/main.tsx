@@ -18,6 +18,11 @@ import Profile from "./Profile"
 
 import './index.css'
 
+// access environment variables from netlify
+const cloudName = import.meta.env.VITE_CLOUD_NAME;
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiSecret = import.meta.env.VITE_API_SECRET;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +31,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/mymedia",
-    element: <MyMedia />,
+    element:
+      <MyMedia
+        cloudName={cloudName}
+        apiKey={apiKey}
+        apiSecret={apiSecret}
+      />,
   },
   {
     path: "/upload",
