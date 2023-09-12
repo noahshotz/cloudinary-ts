@@ -19,10 +19,12 @@ function MyMedia() {
 
     console.log("cloud name" + cloudName)
 
+    const proxy: string = "https://web-production-0fb1.up.railway.app/"
+
     useEffect(() => {
         if (cloudName && apiKey && apiSecret) {
             // Form the URL to fetch images using the Admin API
-            const adminApiUrl = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`;
+            const adminApiUrl = `${proxy}https://api.cloudinary.com/v1_1/${cloudName}/resources/image`;
 
             // Make the authenticated GET request to the Admin API
             fetch(adminApiUrl, {
