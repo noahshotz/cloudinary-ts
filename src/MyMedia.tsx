@@ -6,7 +6,6 @@ import Sidebar from './components/Sidebar';
 
 interface ImageData {
     public_id: string;
-    // Add any other properties you need from the image data
 }
 
 interface MyMediaProps {
@@ -59,13 +58,11 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
             myImage.resize(fill().width(200).height(200));
 
             return (
-                <div className="responsive" key={image.public_id}>
-                    <div className="img">
-                        <a target="_blank" href={myImage.toURL()}>
-                            <AdvancedImage cldImg={myImage} />
-                        </a>
-                        <div className="desc">{image.public_id}</div>
-                    </div>
+                <div className="img" key={image.public_id}>
+                    <a target="_blank" href={myImage.toURL()}>
+                        <AdvancedImage cldImg={myImage} />
+                    </a>
+                    <div className="desc">{image.public_id}</div>
                 </div>
             );
         });
@@ -78,7 +75,9 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
                 <div className="content">
                     <h1>My media</h1>
                     {/* Render the images */}
-                    {renderImages()}
+                    <div className="image-container">
+                        {renderImages()}
+                    </div>
                 </div>
             </div>
         </React.Fragment>
