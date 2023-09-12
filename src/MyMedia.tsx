@@ -20,6 +20,8 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
     // define proxy to avoid CORS issues
     const proxy: string = "https://web-production-0fb1.up.railway.app/"
 
+    const [hadLoaded, setHasLoaded] = useState<boolean>(false)
+
     useEffect(() => {
         if (cloudName && apiKey && apiSecret) {
             // Form the URL to fetch images using the Admin API
@@ -35,7 +37,8 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    setImages(data.resources);
+                    setImages(data.resources)
+                    setHasLoaded(true)
                 })
                 .catch((error) => {
                     console.error(error);
@@ -58,7 +61,7 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
             myImage.resize(fill().width(200).height(200));
 
             return (
-                <div className="img" key={image.public_id}>
+                <div className="mymedia" key={image.public_id}>
                     <a target="_blank" href={myImage.toURL()}>
                         <AdvancedImage cldImg={myImage} />
                     </a>
@@ -74,9 +77,12 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
                 <Sidebar />
                 <div className="content">
                     <h1>My media</h1>
-                    {/* Render the images */}
                     <div className="image-container">
-                        {renderImages()}
+                        {hadLoaded ? (
+                            renderImages() // Render images only if hadLoaded is true
+                        ) : (
+                            <p>Loading...</p> // You can show a loading indicator until images are loaded
+                        )}
                     </div>
                 </div>
             </div>
