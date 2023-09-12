@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
                         <li><a href="profile">User profile</a></li>
                     </ul>
                 </div>
-                <img src="https://api.netlify.com/api/v1/badges/4340a9ce-6d53-4341-bbdc-43578b761064/deploy-status)](https://app.netlify.com/sites/cloudinary-ts/deploys"></img>
+                <img src="https://api.netlify.com/api/v1/badges/4340a9ce-6d53-4341-bbdc-43578b761064/deploy-status"></img>
             </div>
         </React.Fragment>
     )
