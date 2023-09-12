@@ -9,12 +9,13 @@ interface ImageData {
     // Add any other properties you need from the image data
 }
 
+// Use environment variables directly
+const cloudName = process.env.CLOUD_NAME;
+const apiKey = process.env.API_KEY;
+const apiSecret = process.env.API_SECRET;
+
 function MyMedia() {
-    const [images, setImages] = useState<ImageData[]>([]);
-    // Use environment variables directly
-    const cloudName = process.env.CLOUD_NAME;
-    const apiKey = process.env.API_KEY;
-    const apiSecret = process.env.API_SECRET;
+    const [images, setImages] = useState<ImageData[]>([])
 
     console.log("cloud name" + cloudName)
 
