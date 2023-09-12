@@ -9,6 +9,7 @@ function Root() {
                 <Sidebar />
                 <div className="content">
                     <h1>This is the root</h1>
+                    <h2>Use the nav on the left while this page is under construction</h2>
                 </div>
             </div>
         </React.Fragment>

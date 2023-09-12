@@ -1,29 +1,64 @@
-import React from "react";
-import { Cloudinary } from "@cloudinary/url-gen";
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
-import { fill } from "@cloudinary/url-gen/actions/resize";
+import { fill } from '@cloudinary/url-gen/actions/resize';
+import Sidebar from './components/Sidebar';
 
-const ImageTest: React.FC = () => {
+function MyMedia() {
+    const [images, setImages] = useState([]);
 
-    const cld = new Cloudinary({
-        cloud: {
-            cloudName: 'dhc0uuvta'
-        }
-    })
+    useEffect(() => {
+        // Fetch the images from Cloudinary using the folder name "docs"
+        axios
+            .get('https://res.cloudinary.com/dhc0uuvta/image/list/docs.json')
+            .then((res) => {
+                setImages(res.data.resources);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }, []);
 
-    // Instantiate a CloudinaryImage object for the
-    // image with the public ID, 'docs/models'.
-    const myImage = cld.image('docs/models');
+    const renderImages = () => {
+        return images.map((image) => {
+            const cld = new Cloudinary({
+                cloud: {
+                    cloudName: 'your-cloud-name', // Replace with your actual Cloudinary cloud name
+                },
+            });
 
-    // Resize to 250 x 250 pixels using the 'fill' crop mode.
-    myImage.resize(fill().width(400).height(400));
+            // Instantiate a CloudinaryImage object for the current image.
+            const myImage = cld.image(image.public_id);
+
+            // Add any transformations you need, such as resizing.
+            myImage.resize(fill().width(400).height(400));
+
+            return (
+                <div className="responsive" key={image.public_id}>
+                    <div className="img">
+                        <a target="_blank" href={myImage.toURL()}>
+                            <AdvancedImage cldImg={myImage} />
+                        </a>
+                        <div className="desc">{image.public_id}</div>
+                    </div>
+                </div>
+            );
+        });
+    };
 
     return (
         <React.Fragment>
-            <AdvancedImage cldImg={myImage} />
+            <div className="wrapper">
+                <Sidebar />
+                <div className="content">
+                    <h1>My media</h1>
+                    {/* Render the images */}
+                    {renderImages()}
+                </div>
+            </div>
         </React.Fragment>
-    )
+    );
 }
 
-export default ImageTest
+export default MyMedia;
