@@ -34,7 +34,7 @@ const Login: React.FC = () => {
       <main>
         <section>
           <div>
-            <p>FocusApp</p>
+            <p>Cloudinary TS Login</p>
             <form>
               <div>
                 <label htmlFor="email-address">
