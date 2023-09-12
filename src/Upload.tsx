@@ -2,9 +2,13 @@ import React from 'react'
 import Sidebar from './components/Sidebar';
 import ImageUpload from './components/ImageUpload'
 
-function Upload() {
-  const cloudName = 'dhc0uuvta';
-  const uploadPreset = 'devpreset';
+// define interface for props
+interface UploadProps {
+  cloudName: string
+  uploadPreset: string
+}
+
+function Upload({cloudName, uploadPreset}: UploadProps): JSX.Element {
 
   return (
     <React.Fragment>

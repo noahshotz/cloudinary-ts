@@ -22,6 +22,7 @@ import './index.css'
 const cloudName = import.meta.env.VITE_CLOUD_NAME;
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiSecret = import.meta.env.VITE_API_SECRET;
+const uploadPreset = import.meta.env.VITE_UPLOAD_PRESET;
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/upload",
-    element: <Upload />,
+    element:
+      <Upload
+        cloudName={cloudName}
+        uploadPreset={uploadPreset}
+      />,
   },
   {
     path: "/profile",

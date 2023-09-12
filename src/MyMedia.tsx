@@ -16,10 +16,9 @@ interface MyMediaProps {
 }
 
 function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
+
     const [images, setImages] = useState<ImageData[]>([])
-
-    console.log("cloud name" + cloudName)
-
+    // define proxy to avoid CORS issues
     const proxy: string = "https://web-production-0fb1.up.railway.app/"
 
     useEffect(() => {
