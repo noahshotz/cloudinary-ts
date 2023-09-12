@@ -16,6 +16,8 @@ function MyMedia() {
     const apiKey = process.env.API_KEY;
     const apiSecret = process.env.API_SECRET;
 
+    console.log("cloud name" + cloudName)
+
     useEffect(() => {
         if (cloudName && apiKey && apiSecret) {
             // Form the URL to fetch images using the Admin API
