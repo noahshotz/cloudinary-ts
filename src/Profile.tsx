@@ -1,27 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import Sidebar from './components/Sidebar';
-import { auth } from '../firebase';
+import React, { useEffect, useState } from 'react'
+import Sidebar from './components/Sidebar'
+import { auth } from '../firebase'
+import { useNavigate } from 'react-router-dom'
 
 function Profile() {
-  const [userMailAddress, setUserMailAddress] = useState<string | null>(null);
+
+  // Use the useNavigate hook to manage navigation
+  const navigate = useNavigate()
+
+  // Use the useState hook to store the user's email address
+  const [userMailAddress, setUserMailAddress] = useState<string | null>(null)
 
   useEffect(() => {
     // Set up a Firebase Authentication state listener
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // If a user is signed in, set the user's email address
-        setUserMailAddress(user.email);
+        setUserMailAddress(user.email)
       } else {
         // If no user is signed in, you can handle this case as needed
-        console.log('No user is signed in');
+        console.log('No user is signed in')
         // For example, you can navigate the user to the login page:
-        // navigate('/login');
+        navigate('/login')
       }
-    });
+    })
 
     // Clean up the listener when the component unmounts
-    return () => unsubscribe();
-  }, []);
+    return () => unsubscribe()
+  }, [])
 
   return (
     <React.Fragment>
@@ -33,7 +39,7 @@ function Profile() {
         </div>
       </div>
     </React.Fragment>
-  );
+  )
 }
 
-export default Profile;
+export default Profile
