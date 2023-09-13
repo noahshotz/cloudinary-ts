@@ -38,6 +38,9 @@ body {
   padding: 2.5rem;
   background-color: #f4faff;
   min-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar img {
