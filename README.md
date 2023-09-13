@@ -9,10 +9,12 @@ Vite is a build tool and development server that's designed to make web developm
 
 ### Installation
 
-```git clone https://github.com/noahshotz/cloudinary-ts.git```
-```cd cloudinary-ts```
-```cd npm install```
-```npm run dev```
+```
+git clone https://github.com/noahshotz/cloudinary-ts.git
+cd cloudinary-ts
+cd npm install
+npm run dev
+```
 
 This project relies on mandatory enviroment variables needed for authentication.
 
