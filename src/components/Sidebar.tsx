@@ -1,7 +1,7 @@
 import React from "react";
 import Logout from "./Logout";
 
-import { HiPhoto } from "react-icons/hi";
+import { HiPhoto } from "react-icons/hi2";
 import { AiOutlineCloudUpload as UploadIcon } from "react-icons/ai";
 import { AiOutlineUser as UserIcon } from "react-icons/ai";
 
