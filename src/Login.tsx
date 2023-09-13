@@ -31,7 +31,7 @@ const Login: React.FC = () => {
 
   return (
     <React.Fragment>
-      <div className="wrapper">
+      <div className="fullscreen-form-wrapper">
         <div className="login-ct">
           <h1>Cloudinary TS Login</h1>
           <form>
