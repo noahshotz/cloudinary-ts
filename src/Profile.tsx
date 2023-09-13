@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import { auth } from '../firebase'; // Import the auth object directly
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
+
+  const navigate = useNavigate();
+
   const [userMailAddress, setUserMailAddress] = useState<string | null>('');
 
   useEffect(() => {
@@ -10,6 +14,8 @@ function Profile() {
     if (auth.currentUser) {
       // If the user is authenticated, set the user's email address
       setUserMailAddress(auth.currentUser.email);
+    } else {
+      navigate("/login");
     }
   }, []);
 
