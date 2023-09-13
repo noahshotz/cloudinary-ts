@@ -22,10 +22,10 @@ const Sidebar: React.FC = () => {
                     </div>
                 </div>
                 <div className="bottom-section">
+                    <img src="https://api.netlify.com/api/v1/badges/4340a9ce-6d53-4341-bbdc-43578b761064/deploy-status"></img>
                     <div className="logout">
                         <Logout />
                     </div>
-                    <img src="https://api.netlify.com/api/v1/badges/4340a9ce-6d53-4341-bbdc-43578b761064/deploy-status"></img>
                 </div>
             </div>
         </React.Fragment>
