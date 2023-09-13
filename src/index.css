@@ -84,7 +84,7 @@ ul li {
 }
 
 ul li a {
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 5px;
   transition: 0.2s;
   display: flex;
@@ -107,7 +107,7 @@ h1 {
 }
 
 .logo h1 {
-  font-family: Space-Grotesk, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
 }
 
