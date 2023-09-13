@@ -15,7 +15,7 @@ function Profile() {
       // If the user is authenticated, set the user's email address
       setUserMailAddress(auth.currentUser.email);
     } else {
-      navigate("/login");
+      console.log('No user is signed in');
     }
   }, []);
 
