@@ -1,6 +1,10 @@
 import React from "react";
 import Logout from "./Logout";
 
+import { HiPhoto } from "react-icons/hi";
+import { AiOutlineCloudUpload as UploadIcon } from "react-icons/ai";
+import { AiOutlineUser as UserIcon } from "react-icons/ai";
+
 const Sidebar: React.FC = () => {
     return (
         <React.Fragment>
@@ -10,9 +14,9 @@ const Sidebar: React.FC = () => {
                 </div>
                 <div className="navigation">
                     <ul>
-                        <li><a href="mymedia">My media</a></li>
-                        <li><a href="upload">Upload</a></li>
-                        <li><a href="profile">User profile</a></li>
+                        <li><a href="mymedia"><HiPhoto /> My media</a></li>
+                        <li><a href="upload"><UploadIcon /> Upload</a></li>
+                        <li><a href="profile"><UserIcon /> User profile</a></li>
                     </ul>
                 </div>
                 <div className="logout">
