@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
             <div className="sidebar">
                 <div className="top-section">
                     <div className="logo">
-                        <h1>My app</h1>
+                        <h1>ImageHub</h1>
                     </div>
                     <div className="navigation">
                         <ul>
