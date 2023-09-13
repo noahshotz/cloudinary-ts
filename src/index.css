@@ -42,17 +42,25 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 
-.sidebar {
+.fullscreen-form-wrapper .sidebar {
   padding: 2.5rem;
   background-color: #f4faff;
   min-width: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.fullscreen-form-wrapper h1 {
+  text-align: left;
+  align-self: flex-start;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
 }
 
 .sidebar img {
