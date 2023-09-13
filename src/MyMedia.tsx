@@ -3,6 +3,8 @@ import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
 import { fill } from '@cloudinary/url-gen/actions/resize';
 import Sidebar from './components/Sidebar';
+import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 interface ImageData {
     public_id: string;
@@ -15,36 +17,43 @@ interface MyMediaProps {
 }
 
 function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
-
-    const [images, setImages] = useState<ImageData[]>([])
-    // define proxy to avoid CORS issues
-    const proxy: string = "https://web-production-0fb1.up.railway.app/"
-
-    const [hadLoaded, setHasLoaded] = useState<boolean>(false)
+    const navigate = useNavigate();
+    const [images, setImages] = useState<ImageData[]>([]);
+    const proxy: string = "https://web-production-0fb1.up.railway.app/";
+    const [hadLoaded, setHasLoaded] = useState<boolean>(false);
 
     useEffect(() => {
-        if (cloudName && apiKey && apiSecret) {
-            // Form the URL to fetch images using the Admin API
-            const adminApiUrl = `${proxy}https://api.cloudinary.com/v1_1/${cloudName}/resources/image`;
+        // Set up a Firebase Authentication state listener
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            if (user) {
+                // If a user is signed in, fetch and display images
+                if (cloudName && apiKey && apiSecret) {
+                    const adminApiUrl = `${proxy}https://api.cloudinary.com/v1_1/${cloudName}/resources/image`;
 
-            // Make the authenticated GET request to the Admin API
-            fetch(adminApiUrl, {
-                method: 'GET',
-                headers: {
-                    // Basic Authentication with API key and secret
-                    'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
-                },
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    setImages(data.resources)
-                    setHasLoaded(true)
-                })
-                .catch((error) => {
-                    console.error(error);
-                });
-        }
-    }, [cloudName, apiKey, apiSecret]);
+                    fetch(adminApiUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+                        },
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            setImages(data.resources);
+                            setHasLoaded(true);
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                        });
+                }
+            } else {
+                // If no user is signed in, redirect to the login page
+                navigate('/login');
+            }
+        });
+
+        // Clean up the listener when the component unmounts
+        return () => unsubscribe();
+    }, [cloudName, apiKey, apiSecret, navigate]);
 
     const renderImages = () => {
         return images.map((image) => {
@@ -54,10 +63,7 @@ function MyMedia({ cloudName, apiKey, apiSecret }: MyMediaProps): JSX.Element {
                 },
             });
 
-            // Instantiate a CloudinaryImage object for the current image.
             const myImage = cld.image(image.public_id);
-
-            // Add any transformations you need, such as resizing.
             myImage.resize(fill().width(200).height(200));
 
             return (
