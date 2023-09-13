@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "./Logout";
 
 const Sidebar: React.FC = () => {
     return (
@@ -13,6 +14,9 @@ const Sidebar: React.FC = () => {
                         <li><a href="upload">Upload</a></li>
                         <li><a href="profile">User profile</a></li>
                     </ul>
+                </div>
+                <div className="logout">
+                    <Logout />
                 </div>
                 <img src="https://api.netlify.com/api/v1/badges/4340a9ce-6d53-4341-bbdc-43578b761064/deploy-status"></img>
             </div>
