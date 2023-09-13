@@ -134,7 +134,8 @@ a:hover {
   gap: 10px;
 }
 
-.action-buttons button {
+.action-buttons button,
+.logout button {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   border-style: none;
   padding: 10px 15px;
