@@ -102,8 +102,8 @@ ul li a:hover {
 
 h1 {
   margin: 0;
-  padding: 0.75rem 0rem;
   white-space: nowrap;
+  padding: 0.75rem 0.5rem;
 }
 
 .logo h1 {
