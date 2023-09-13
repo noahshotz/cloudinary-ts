@@ -14,9 +14,9 @@ const Sidebar: React.FC = () => {
                 </div>
                 <div className="navigation">
                     <ul>
-                        <li><a href="mymedia"><HiPhoto /> My media</a></li>
+                        <li><a href="mymedia"><HiPhoto /> Photos</a></li>
                         <li><a href="upload"><UploadIcon /> Upload</a></li>
-                        <li><a href="profile"><UserIcon /> User profile</a></li>
+                        <li><a href="profile"><UserIcon /> Profile</a></li>
                     </ul>
                 </div>
                 <div className="logout">
