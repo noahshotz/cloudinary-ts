@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
-import { auth } from '../firebase'; // Import the auth object directly
-//import { useNavigate } from 'react-router-dom';
+import { auth } from '../firebase';
 
 function Profile() {
-
-  //const navigate = useNavigate();
-
-  const [userMailAddress, setUserMailAddress] = useState<string | null>('');
+  const [userMailAddress, setUserMailAddress] = useState<string | null>(null);
 
   useEffect(() => {
-    // Check if the user is authenticated
-    if (auth.currentUser) {
-      // If the user is authenticated, set the user's email address
-      setUserMailAddress(auth.currentUser.email);
-    } else {
-      console.log('No user is signed in');
-    }
+    // Set up a Firebase Authentication state listener
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // If a user is signed in, set the user's email address
+        setUserMailAddress(user.email);
+      } else {
+        // If no user is signed in, you can handle this case as needed
+        console.log('No user is signed in');
+        // For example, you can navigate the user to the login page:
+        // navigate('/login');
+      }
+    });
+
+    // Clean up the listener when the component unmounts
+    return () => unsubscribe();
   }, []);
 
   return (
