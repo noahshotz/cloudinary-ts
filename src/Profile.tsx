@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import { auth } from '../firebase'; // Import the auth object directly
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 function Profile() {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const [userMailAddress, setUserMailAddress] = useState<string | null>('');
 
