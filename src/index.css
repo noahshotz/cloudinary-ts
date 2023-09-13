@@ -173,3 +173,8 @@ section div {
   flex-direction: column;
   gap: 1rem;
 }
+
+.login-ct {
+  display: flex;
+  flex-direction: column;
+}

@@ -32,53 +32,55 @@ const Login: React.FC = () => {
   return (
     <React.Fragment>
       <div className="wrapper">
-        <h1>Cloudinary TS Login</h1>
-        <form>
-          <div>
-            <label htmlFor="email-address">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              required
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+        <div className="login-ct">
+          <h1>Cloudinary TS Login</h1>
+          <form>
+            <div>
+              <label htmlFor="email-address">
+                Email address
+              </label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                required
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-          <div>
-            <label htmlFor="password">
-              Password
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+            <div>
+              <label htmlFor="password">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-          <div>
-            <button
-              onClick={onLogin}
-            >
-              Login
-            </button>
-          </div>
-        </form>
+            <div>
+              <button
+                onClick={onLogin}
+              >
+                Login
+              </button>
+            </div>
+          </form>
 
-        <p className="text-sm text-white text-center">
-          No account yet?{' '}
-          <NavLink to="/signup">
-            Sign up
-          </NavLink>
-        </p>
+          <p className="text-sm text-white text-center">
+            No account yet?{' '}
+            <NavLink to="/signup">
+              Sign up
+            </NavLink>
+          </p>
+        </div>
       </div>
     </React.Fragment>
   );
