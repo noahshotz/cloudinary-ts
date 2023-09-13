@@ -54,11 +54,11 @@ body {
 }
 
 .sidebar img {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0rem;
 }
 
 .sidebar .logout {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0rem;
 }
 
 .content {
@@ -82,7 +82,7 @@ ul li {
 }
 
 ul li a {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0rem;
   border-radius: 5px;
   transition: 0.2s;
   display: flex;
@@ -100,7 +100,7 @@ ul li a:hover {
 
 h1 {
   margin: 0;
-  padding: 0.75rem;
+  padding: 0.75rem 0rem;
   white-space: nowrap;
 }
 
