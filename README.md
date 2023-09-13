@@ -7,6 +7,26 @@ This is a WIP basic implementation of an image manager using Cloudinary in React
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Following enviroment variables need to be set:
+
+`VITE_API_KEY` - Your cloudinary API key
+
+`VITE_API_SECRET` - Your cloudinary API secret
+
+`VITE_CLOUD_NAME` - Your cloudinary cloud name
+
+`VITE_UPLOAD_PRESET` - Your cloudinary upload secret
+
+`VITE_FIREBASE_API_KEY`
+
+`VITE_FIREBASE_APP_ID`
+
+`VITE_FIREBASE_AUTH_DOMAIN`
+
+`VITE_FIREBASE_MEASUREMENT_ID`
+
+`VITE_FIREBASE_SENDER_ID`
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
