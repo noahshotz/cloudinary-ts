@@ -44,6 +44,10 @@ body {
   padding: 0.5rem 0.75rem;
 }
 
+.sidebar .logout {
+  padding: 0.5rem 0.75rem;
+}
+
 .content {
   padding: 2.5rem;
   width: 100%;
