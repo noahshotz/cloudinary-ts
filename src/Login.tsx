@@ -32,8 +32,9 @@ const Login: React.FC = () => {
   return (
     <React.Fragment>
       <div className="fullscreen-form-wrapper">
+        <h1>ImageHub</h1>
         <div className="login-ct">
-          <h1>Cloudinary TS Login</h1>
+          <h2>Login</h2>
           <form>
             <div>
               <label htmlFor="email-address">
