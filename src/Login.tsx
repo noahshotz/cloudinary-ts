@@ -32,7 +32,9 @@ const Login: React.FC = () => {
   return (
     <React.Fragment>
       <div className="fullscreen-form-wrapper">
-        <h1>ImageHub</h1>
+        <div className="fullscreen-bg-container">
+          <h1>ImageHub</h1>
+        </div>
         <div className="login-ct">
           <h2>Login</h2>
           <form>

@@ -44,7 +44,18 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.fullscreen-bg-container,
+.login-ct {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 50vw;
+}
+.fullscreen-bg-container {
+  background-color: antiquewhite;
 }
 
 .sidebar {
