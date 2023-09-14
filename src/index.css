@@ -61,7 +61,6 @@ body {
 .login-group h2 {
   padding: 0;
   margin: 0;
-  color: white;
 }
 
 .fullscreen-bg-container {
@@ -74,6 +73,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   padding: 2rem;
+  color: white;
 }
 
 .sidebar {
