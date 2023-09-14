@@ -54,8 +54,22 @@ body {
   height: 100vh;
   width: 50vw;
 }
+
 .fullscreen-bg-container {
   background-color: antiquewhite;
+}
+
+.fullscreen-form-wrapper h1 {
+  text-align: left;
+  align-self: flex-start;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+.fullscreen-form-wrapper h1,
+.fullscreen-form-wrapper h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .sidebar {
@@ -65,14 +79,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.fullscreen-form-wrapper h1 {
-  padding: 2rem;
-  text-align: left;
-  align-self: flex-start;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
 }
 
 .sidebar img {
