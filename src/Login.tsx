@@ -35,56 +35,54 @@ const Login: React.FC = () => {
         <div className="fullscreen-bg-container">
           <h1>ImageHub</h1>
         </div>
-        <div className="fullscreen-content-container">
-          <div className="login-ct">
-            <h2>Login</h2>
-            <form>
-              <div>
-                <label htmlFor="email-address">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+        <div className="login-ct">
+          <h2>Login</h2>
+          <form>
+            <div>
+              <label htmlFor="email-address">
+                Email address
+              </label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                required
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-              <div>
-                <label htmlFor="password">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  required
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
+            <div>
+              <label htmlFor="password">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-              <div>
-                <button
-                  onClick={onLogin}
-                >
-                  Login
-                </button>
-              </div>
-            </form>
+            <div>
+              <button
+                onClick={onLogin}
+              >
+                Login
+              </button>
+            </div>
+          </form>
 
-            <p className="text-sm text-white text-center">
-              No account yet?{' '}
-              <NavLink to="/signup">
-                Sign up
-              </NavLink>
-            </p>
-          </div>
+          <p className="text-sm text-white text-center">
+            No account yet?{' '}
+            <NavLink to="/signup">
+              Sign up
+            </NavLink>
+          </p>
         </div>
       </div>
     </React.Fragment>

@@ -59,11 +59,6 @@ body {
   background-color: antiquewhite;
 }
 
-.fullscreen-bg-container,
-.fullscreen-content-container {
-  margin: 2rem;
-}
-
 .fullscreen-form-wrapper h1 {
   text-align: left;
   align-self: flex-start;
