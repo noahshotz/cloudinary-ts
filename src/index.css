@@ -74,10 +74,11 @@ body {
 .login-group input {
   display: block;
   min-width: 200px;
+  margin-top: 0.5rem;
 }
 
 .login-group input {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .fullscreen-bg-container {
