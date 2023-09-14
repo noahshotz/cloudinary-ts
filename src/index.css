@@ -55,12 +55,23 @@ body {
   width: 50vw;
 }
 
+.login-ct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .login-group {
   margin: 2rem;
 }
 .login-group h2 {
   padding: 0;
   margin: 0;
+}
+
+.login-group label,
+.login-group input {
+  display: block;
 }
 
 .fullscreen-bg-container {
