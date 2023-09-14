@@ -33,56 +33,54 @@ const Signup: React.FC = () => {
     };
 
     return (
-        <main>
-            <section>
-                <div>
-                    <div>
-                        <h1>Cloudinary-TS Signup</h1>
-                        <form>
-                            <div>
-                                <label htmlFor="email-address">
-                                    Email address
-                                </label>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    placeholder="Email address"
-                                />
-                            </div>
+        <React.Fragment>
+            <div className="fullscreen-form-wrapper">
+                <h1>ImageHub</h1>
+                <div className="login-ct">
+                    <h2>Sign up</h2>
+                    <form>
+                        <div>
+                            <label htmlFor="email-address">
+                                Email address
+                            </label>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                placeholder="Email address"
+                            />
+                        </div>
 
-                            <div>
-                                <label htmlFor="password">
-                                    Password
-                                </label>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    placeholder="Password"
-                                />
-                            </div>
+                        <div>
+                            <label htmlFor="password">
+                                Password
+                            </label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                placeholder="Password"
+                            />
+                        </div>
 
-                            <button
-                                type="submit"
-                                onClick={onSubmit}
-                            >
-                                Sign up
-                            </button>
-                        </form>
-
-                        <p>
-                            Already have an account?{' '}
-                            <NavLink to="/login">
-                                Sign in
-                            </NavLink>
-                        </p>
-                    </div>
+                        <button
+                            type="submit"
+                            onClick={onSubmit}
+                        >
+                            Sign up
+                        </button>
+                    </form>
+                    <p>
+                        Already have an account?{' '}
+                        <NavLink to="/login">
+                            Sign in
+                        </NavLink>
+                    </p>
                 </div>
-            </section>
-        </main>
+            </div>
+        </React.Fragment >
     );
 };
 
