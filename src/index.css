@@ -85,6 +85,8 @@ body {
 .login-group button {
   width: 100%;
   padding: 0.5rem 0.75rem;
+  border: none;
+  background-color: #646cff;
 }
 
 .fullscreen-bg-container {
