@@ -60,7 +60,7 @@ body {
 }
 
 .fullscreen-bg-container {
-  background-color: antiquewhite;
+  background-color: #646cff;
 }
 
 .fullscreen-form-wrapper h1 {
@@ -68,6 +68,7 @@ body {
   align-self: flex-start;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
+  padding: 2rem;
 }
 
 .fullscreen-form-wrapper h1,
