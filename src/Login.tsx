@@ -68,14 +68,11 @@ const Login: React.FC = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-
-              <div>
-                <button
-                  onClick={onLogin}
-                >
-                  Login
-                </button>
-              </div>
+              <button
+                onClick={onLogin}
+              >
+                Login
+              </button>
             </form>
 
             <p className="text-sm text-white text-center">

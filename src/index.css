@@ -73,12 +73,17 @@ body {
 .login-group label,
 .login-group input {
   display: block;
-  min-width: 200px;
+  min-width: 250px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .login-group input {
+  padding: 0.5rem 0.75rem;
+}
+
+login-group button {
+  width: 100%;
   padding: 0.5rem 0.75rem;
 }
 
