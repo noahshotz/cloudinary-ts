@@ -75,7 +75,7 @@ const Login: React.FC = () => {
               </button>
             </form>
 
-            <p className="text-sm text-white text-center">
+            <p>
               No account yet?{' '}
               <NavLink to="/signup">
                 Sign up
