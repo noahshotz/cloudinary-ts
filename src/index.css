@@ -79,6 +79,10 @@ body {
   font-size: 1rem;
 }
 
+.login-group label {
+  font-weight: 500;
+}
+
 .login-group input {
   padding: 0.5rem 0.75rem;
 }
